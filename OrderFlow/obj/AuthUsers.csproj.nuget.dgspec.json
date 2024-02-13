@@ -1,0 +1,261 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers\\AuthUsers.csproj": {}
+  },
+  "projects": {
+    "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Common\\AuthUsers.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Common\\AuthUsers.Common.csproj",
+        "projectName": "AuthUsers.Common",
+        "projectPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Common\\AuthUsers.Common.csproj",
+        "packagesPath": "C:\\Users\\Muril\\.nuget\\packages\\",
+        "outputPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Muril\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Domain\\AuthUsers.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Domain\\AuthUsers.Domain.csproj",
+        "projectName": "AuthUsers.Domain",
+        "projectPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Domain\\AuthUsers.Domain.csproj",
+        "packagesPath": "C:\\Users\\Muril\\.nuget\\packages\\",
+        "outputPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Muril\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Infra\\AuthUsers.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Infra\\AuthUsers.Infra.csproj",
+        "projectName": "AuthUsers.Infra",
+        "projectPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Infra\\AuthUsers.Infra.csproj",
+        "packagesPath": "C:\\Users\\Muril\\.nuget\\packages\\",
+        "outputPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Infra\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Muril\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Common\\AuthUsers.Common.csproj": {
+                "projectPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Common\\AuthUsers.Common.csproj"
+              },
+              "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Domain\\AuthUsers.Domain.csproj": {
+                "projectPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Domain\\AuthUsers.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers\\AuthUsers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers\\AuthUsers.csproj",
+        "projectName": "AuthUsers",
+        "projectPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers\\AuthUsers.csproj",
+        "packagesPath": "C:\\Users\\Muril\\.nuget\\packages\\",
+        "outputPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Muril\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Domain\\AuthUsers.Domain.csproj": {
+                "projectPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Domain\\AuthUsers.Domain.csproj"
+              },
+              "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Infra\\AuthUsers.Infra.csproj": {
+                "projectPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\AuthUsers.Infra\\AuthUsers.Infra.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

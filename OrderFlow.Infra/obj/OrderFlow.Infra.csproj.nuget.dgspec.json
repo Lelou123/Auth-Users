@@ -1,0 +1,180 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Infra\\OrderFlow.Infra.csproj": {}
+  },
+  "projects": {
+    "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Common\\OrderFlow.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Common\\OrderFlow.Common.csproj",
+        "projectName": "OrderFlow.Common",
+        "projectPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Common\\OrderFlow.Common.csproj",
+        "packagesPath": "C:\\Users\\Muril\\.nuget\\packages\\",
+        "outputPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Muril\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Domain\\OrderFlow.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Domain\\OrderFlow.Domain.csproj",
+        "projectName": "OrderFlow.Domain",
+        "projectPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Domain\\OrderFlow.Domain.csproj",
+        "packagesPath": "C:\\Users\\Muril\\.nuget\\packages\\",
+        "outputPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Muril\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Infra\\OrderFlow.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Infra\\OrderFlow.Infra.csproj",
+        "projectName": "OrderFlow.Infra",
+        "projectPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Infra\\OrderFlow.Infra.csproj",
+        "packagesPath": "C:\\Users\\Muril\\.nuget\\packages\\",
+        "outputPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Infra\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Muril\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Common\\OrderFlow.Common.csproj": {
+                "projectPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Common\\OrderFlow.Common.csproj"
+              },
+              "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Domain\\OrderFlow.Domain.csproj": {
+                "projectPath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Domain\\OrderFlow.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

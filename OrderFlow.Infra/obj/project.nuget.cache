@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "LZlb8m4clfjPPZQ3oKtLvoufJCPAyPanAc7XF763vcKMltVieo9HY5i2PCzfT13DKFP5ugp8Yx7bWZ3sG68MMQ==",
+  "success": true,
+  "projectFilePath": "G:\\Estudos\\Alguns Projetos\\C#\\AuthUsers\\OrderFlow.Infra\\OrderFlow.Infra.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Muril\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\Muril\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Muril\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\Muril\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Muril\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
