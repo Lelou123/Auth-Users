@@ -20,7 +20,7 @@ public static class DependencyInjection
 
     private static IServiceCollection ConfigureServices(this IServiceCollection services)
     {
-        //services.AddScoped<IEmailService, EmailService>();
+        services.AddScoped<IEmailService, EmailService>();
         services.AddScoped<IJwtTokenService, JwtTokenService>();
 
         return services;

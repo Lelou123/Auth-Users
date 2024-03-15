@@ -2,13 +2,14 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using OrderFlow.Common.Domain.Entities.User;
+using OrderFlow.Domain.Entities.Users;
 
 namespace OrderFlow.Application.ApplicationServices.Policies;
 
 public class UserAuthorizationHandler : AuthorizationHandler<UserAuthorizationRequirement>
 {
     private readonly IHttpContextAccessor _httpContextAccessor;
+
     private readonly UserManager<User> _userManager;
 
     public UserAuthorizationHandler(IHttpContextAccessor httpContextAccessor, UserManager<User> userManager)

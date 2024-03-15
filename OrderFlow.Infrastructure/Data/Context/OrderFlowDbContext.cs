@@ -1,14 +1,17 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using OrderFlow.Common.Domain.Entities.User;
+using OrderFlow.Domain.Entities.Address;
+using OrderFlow.Domain.Entities.ClientEntities;
+using OrderFlow.Domain.Entities.RestaurantEntities;
+using OrderFlow.Domain.Entities.Users;
 using OrderFlow.Infrastructure.Data.Mapping;
 
 namespace OrderFlow.Infrastructure.Data.Context;
 
 public class OrderFlowDbContext(
     DbContextOptions<OrderFlowDbContext> options
-) : IdentityDbContext<User, Role, Guid>(options)
+) : IdentityDbContext<User, Role, Guid>(options), IApplicationDbContext
 {
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -31,4 +34,16 @@ public class OrderFlowDbContext(
             throw;
         }
     }
+
+    public DbSet<UserAddress> UserAddresses { get; set; }
+
+    public DbSet<Restaurant> Restaurants { get; set; }
+
+    public DbSet<Client> Clients { get; set; }
+
+    public DbSet<Order> Order { get; set; }
+
+    public DbSet<Menu> Menus { get; set; }
+
+    public DbSet<MenuItem> MenuItems { get; set; }
 }

@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Routing;
 using OrderFlow.Application.Handlers.Users.Commands.CreateUserCommand;
+using OrderFlow.Domain.Abstractions;
+using OverFlow.Presentation.Extensions;
 
 namespace OverFlow.Presentation.Endpoints;
 
@@ -15,16 +17,15 @@ public class OrderTestEndpoints : ICarterModule
         var group = app.MapGroup("api/orders");
 
         //v1
-        group.MapPost(
-            string.Empty, async (ISender sender) => {
-                var command = new CreateUserCommand("Jorge", "murillojulio.dev@outlook.com");
-
-                var result = await sender.Send(command);
-
-                return result.IsSuccess ? Results.Ok(result.Data) : Results.BadRequest();
-            }
-        );
-
+        // group.MapPost(
+        //     string.Empty, async (ISender sender) => {
+        //         CreateUserCommand command = new("Murillo", "murillojulio.dev@outlook.com");
+        //
+        //         Result<CreateUserCommand> result = await sender.Send(command);
+        //
+        //         return result.IsSuccess ? Results.Ok(result.Value) : result.ToProblemDetails();
+        //     }
+        // );
 
         //v2
         group.MapGet("", GetOrders);

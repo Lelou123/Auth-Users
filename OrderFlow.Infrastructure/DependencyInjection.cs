@@ -2,19 +2,27 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using OrderFlow.Common.Domain.Entities.User;
+using OrderFlow.Domain.Entities.Users;
+using OrderFlow.Domain.Interfaces.Repositories;
 using OrderFlow.Domain.Interfaces.Services;
 using OrderFlow.Infrastructure.AutoMapper;
 using OrderFlow.Infrastructure.Data.Context;
+using OrderFlow.Infrastructure.Data.Repositories;
+using OrderFlow.Infrastructure.Settings;
 
 namespace OrderFlow.Infrastructure;
 
 public static class DependencyInjection
 {
+    private static IConfiguration _configuration = null!;
+
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
+        _configuration = configuration;
+
         services.ConfigureAutoMapper()
-            .ConfigureDataBase(configuration)
+            .ConfigureDataBase()
+            .ConfigureKeys()
             .ConfigureIdentity();
 
         return services;
@@ -29,15 +37,26 @@ public static class DependencyInjection
         return services;
     }
 
-    private static IServiceCollection ConfigureDataBase(this IServiceCollection services, IConfiguration configuration)
+    private static IServiceCollection ConfigureDataBase(this IServiceCollection services)
     {
-        services.AddDbContext<OrderFlowDbContext>(
+        services.AddDbContext<IApplicationDbContext, OrderFlowDbContext>(
             options => options.UseLazyLoadingProxies()
-                .UseNpgsql(configuration.GetConnectionString("ConnectionPG"))
+                .UseNpgsql(_configuration.GetConnectionString("ConnectionPG"))
         );
 
+        services.AddTransient<IClientRepository, ClientRepository>();
+        services.AddTransient<IRestaurantRepository, RestaurantRepository>();
+
         return services;
-        //services.AddTransient<IWeatherForecastRepository, WeatherForecastRepository>();
+    }
+
+    private static IServiceCollection ConfigureKeys(this IServiceCollection services)
+    {
+        services.Configure<EmailSettings>(_configuration.GetSection("EmailSettings"));
+
+        services.Configure<JwtSecret>(_configuration.GetSection("JwtSecret"));
+
+        return services;
     }
 
     private static void ConfigureIdentity(this IServiceCollection services)
@@ -47,8 +66,7 @@ public static class DependencyInjection
             .AddDefaultTokenProviders();
 
         services.Configure<IdentityOptions>(
-            options =>
-            {
+            options => {
                 options.Password.RequireLowercase = true;
                 options.Password.RequireUppercase = true;
                 options.Password.RequireNonAlphanumeric = true;

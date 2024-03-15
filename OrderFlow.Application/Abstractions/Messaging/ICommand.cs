@@ -1,8 +1,8 @@
 ﻿using MediatR;
-using OrderFlow.Domain.Dtos;
+using OrderFlow.Domain.Abstractions;
 
 namespace OrderFlow.Application.Abstractions.Messaging;
 
 public interface ICommand : IRequest<Result>;
 
-public interface ICommand<out TResponse> : IRequest<TResponse>;
+public interface ICommand<TResponse> : IRequest<Result<TResponse>>;

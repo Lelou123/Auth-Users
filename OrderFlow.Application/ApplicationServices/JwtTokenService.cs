@@ -1,34 +1,38 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
-using System.Net;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using OrderFlow.Common.CustomException;
-using OrderFlow.Common.Domain.Entities.User;
+using OrderFlow.Domain.Abstractions;
 using OrderFlow.Domain.Dtos;
+using OrderFlow.Domain.Entities.Users;
 using OrderFlow.Domain.Interfaces.Services;
 using OrderFlow.Infrastructure.Settings;
 
 namespace OrderFlow.Application.ApplicationServices;
 
-public class JwtTokenService : IJwtTokenService
+public class JwtTokenService(
+    IOptions<JwtSecret> jwtSecret
+) : IJwtTokenService
 {
-    public JwtToken GetToken(User user, IEnumerable<string> roles)
-    {
-        string? jwtSecret = JwtSecret.JwtSecretKey;
+    private readonly JwtSecret? _jwtSecret = jwtSecret.Value;
 
-        if (jwtSecret is null)
+    public Result<JwtToken> GetToken(User user, IEnumerable<string> roles)
+    {
+
+        if (_jwtSecret is null)
         {
-            throw new CustomException(HttpStatusCode.InternalServerError, "Jwt_Key Not found");
+            return Result.Failure<JwtToken>(
+                new Error("JwtKey.NotFound", "The Jwt Key was not found, verify the configurations")
+            );
         }
 
         if (user.UserName is null)
         {
-            throw new CustomException(HttpStatusCode.InternalServerError, "UserName cant be null");
+            return Result.Failure<JwtToken>(Error.NullValue);
         }
 
-        var userClaims = new[]
-            {
+        Claim[]? userClaims = new[] {
                 new Claim(ClaimTypes.NameIdentifier, user.UserName),
                 new Claim(ClaimTypes.Sid, user.Id.ToString())
             }
@@ -36,7 +40,7 @@ public class JwtTokenService : IJwtTokenService
             .ToArray();
 
 
-        var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecret));
+        var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSecret.JwtSecretKey));
         var credentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256);
 
         var jwtSecurityToken = new JwtSecurityToken(

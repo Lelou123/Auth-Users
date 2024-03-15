@@ -1,6 +1,4 @@
-﻿using System.Net;
-using AutoMapper;
-using OrderFlow.Common.CustomException;
+﻿using AutoMapper;
 using OrderFlow.Domain.Interfaces.Services;
 
 namespace OrderFlow.Infrastructure.AutoMapper;
@@ -18,10 +16,7 @@ public class AutoMapperService : IMappingService
     {
         if (source is null)
         {
-            throw new CustomException(
-                HttpStatusCode.BadRequest,
-                "Source Can not be null"
-            );
+            throw new Exception("Source to map can not be null");
         }
 
         return _mapper.Map<TDestination>(source);
@@ -36,10 +31,7 @@ public class AutoMapperService : IMappingService
     {
         if (source is null)
         {
-            throw new CustomException(
-                HttpStatusCode.BadRequest,
-                "Source Can not be null"
-            );
+            throw new Exception("Source to map can not be null");
         }
 
         return _mapper.Map<IEnumerable<TDestination>>(source);

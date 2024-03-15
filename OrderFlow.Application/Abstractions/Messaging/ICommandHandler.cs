@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using OrderFlow.Domain.Dtos;
+using OrderFlow.Domain.Abstractions;
 
 namespace OrderFlow.Application.Abstractions.Messaging;
 
@@ -8,4 +8,4 @@ public interface ICommandHandler<in TCommand> : IRequestHandler<TCommand, Result
 
 
 public interface ICommandHandler<in TCommand, TResponse> : IRequestHandler<TCommand, Result<TResponse>>
-    where TCommand : ICommand<Result<TResponse>>;
+    where TCommand : ICommand<TResponse>;

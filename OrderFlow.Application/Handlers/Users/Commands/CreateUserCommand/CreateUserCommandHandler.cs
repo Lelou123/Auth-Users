@@ -1,22 +1,41 @@
-﻿using System.Net;
+﻿using Microsoft.AspNetCore.Identity;
 using OrderFlow.Application.Abstractions.Messaging;
-using OrderFlow.Common.CustomException;
+using OrderFlow.Domain.Abstractions;
 using OrderFlow.Domain.Dtos;
+using OrderFlow.Domain.Entities.Users;
+using OrderFlow.Domain.Interfaces.Services;
 
 namespace OrderFlow.Application.Handlers.Users.Commands.CreateUserCommand;
 
-internal class CreateUserCommandHandler : ICommandHandler<CreateUserCommand, CreateUserCommand>
+internal class CreateUserCommandHandler(
+    UserManager<User> userManager,
+    IMappingService mappingService,
+    IEmailService emailService
+) : ICommandHandler<CreateUserCommand, Guid>
 {
-    public async Task<Result<CreateUserCommand>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+    public async Task<Result<Guid>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
-        if (request.Name is "Jorge")
+        var user = mappingService.Map<User>(request);
+
+        var createUserResult = await userManager.CreateAsync(user);
+
+        if (!createUserResult.Succeeded)
         {
-            throw new CustomException(HttpStatusCode.Forbidden, "Something went wrong");
+            return Result.Failure<Guid>(
+                new Error("User.CreateUser", $"Error While Creating User: {createUserResult.Errors.FirstOrDefault()}")
+            );
         }
 
-        return new Result<CreateUserCommand> {
-            Data = request,
-            IsSuccess = true
-        };
+        var sendEmailResult = await emailService.SendEmail(
+            new EmailMessage(user.Email, user.UserName, "Activate Email", "Email Activation")
+        );
+
+        if (sendEmailResult.IsFailure)
+        {
+            return Result.Failure<Guid>(sendEmailResult.Error);
+        }
+
+
+        return Guid.NewGuid();
     }
 }

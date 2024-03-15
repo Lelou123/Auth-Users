@@ -145,3 +145,6 @@ G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Api\bin\Debug\net8.0\ru\Micros
 G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Api\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Api\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Api\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Api\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Api\bin\Debug\net8.0\MailKit.dll
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Api\bin\Debug\net8.0\MimeKit.dll

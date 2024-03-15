@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using OrderFlow.Application.ApplicationServices.Policies;
 using OrderFlow.Domain.Enums;
-using OrderFlow.Domain.Enums.User;
+using OrderFlow.Domain.Enums.Users;
 using OrderFlow.Infrastructure.Settings;
 
 namespace OverFlow.Presentation;
@@ -32,22 +32,18 @@ public static class DependencyInjection
         }
 
         services.AddAuthentication(
-                options =>
-                {
+                options => {
                     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
                 }
             )
             .AddJwtBearer(
-                token =>
-                {
+                token => {
                     token.RequireHttpsMetadata = true;
                     token.SaveToken = true;
 
-                    JwtSecret.JwtSecretKey = jwtSecret;
 
-                    token.TokenValidationParameters = new TokenValidationParameters
-                    {
+                    token.TokenValidationParameters = new TokenValidationParameters {
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecret)),
                         ValidateIssuer = false,
@@ -63,8 +59,7 @@ public static class DependencyInjection
     private static IServiceCollection ConfigureCors(this IServiceCollection services)
     {
         services.AddCors(
-            options =>
-            {
+            options => {
                 options.AddPolicy(
                     "CorsPolicy",
                     corsPolicyBuilder => corsPolicyBuilder.AllowAnyOrigin()
@@ -86,8 +81,7 @@ public static class DependencyInjection
 
         services.AddAuthorizationBuilder()
             .AddPolicy(
-                PoliciesConstant.AuthUser, policy =>
-                {
+                PoliciesConstant.AuthUser, policy => {
                     policy.AddRequirements(
                         new UserAuthorizationRequirement(
                             [

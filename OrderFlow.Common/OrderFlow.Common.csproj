@@ -7,12 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Folder Include="APi\" />
+        <Folder Include="APi\"/>
         <Folder Include="Domain\"/>
+        <Folder Include="Domain\Entities\" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Carter" Version="8.0.0"/>
         <PackageReference Include="MediatR" Version="12.2.0"/>
         <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="8.0.3"/>
     </ItemGroup>

@@ -1,11 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "LxQ6zmMdkGxyVMkPmoq8KTlepLfLzAJBTngXcnqHNuRvJ6GKH6MTqJVDmQLWIL8Wh83T8c1ICiqDV/Y7DZCzGw==",
+  "dgSpecHash": "5Hn0NssALmdiNbyL+N33kYraV5QG9aW/i8U3ua3BuQwmFth29vo8KJj6ZkLVWhvzbydu4BM6MBbjItevj3NI7A==",
   "success": true,
   "projectFilePath": "G:\\Estudos\\Alguns Projetos\\C#\\OrderFlow\\OrderFlow.Domain\\OrderFlow.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Muril\\.nuget\\packages\\carter\\8.0.0\\carter.8.0.0.nupkg.sha512",
-    "C:\\Users\\Muril\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
     "C:\\Users\\Muril\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\Muril\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Muril\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.3\\microsoft.aspnetcore.cryptography.internal.8.0.3.nupkg.sha512",
@@ -13,15 +11,12 @@
     "C:\\Users\\Muril\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Muril\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\Muril\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\Muril\\.nuget\\packages\\microsoft.extensions.dependencymodel\\8.0.0\\microsoft.extensions.dependencymodel.8.0.0.nupkg.sha512",
     "C:\\Users\\Muril\\.nuget\\packages\\microsoft.extensions.identity.core\\8.0.3\\microsoft.extensions.identity.core.8.0.3.nupkg.sha512",
     "C:\\Users\\Muril\\.nuget\\packages\\microsoft.extensions.identity.stores\\8.0.3\\microsoft.extensions.identity.stores.8.0.3.nupkg.sha512",
     "C:\\Users\\Muril\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",
     "C:\\Users\\Muril\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Muril\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
-    "C:\\Users\\Muril\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
-    "C:\\Users\\Muril\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
-    "C:\\Users\\Muril\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512"
+    "C:\\Users\\Muril\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

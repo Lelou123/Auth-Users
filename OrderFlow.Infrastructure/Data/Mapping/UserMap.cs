@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using OrderFlow.Common.Domain.Entities.User;
+using OrderFlow.Domain.Entities.Users;
 
 namespace OrderFlow.Infrastructure.Data.Mapping;
 

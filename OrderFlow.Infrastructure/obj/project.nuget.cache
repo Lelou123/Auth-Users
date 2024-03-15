@@ -1,13 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "k1+tGOyGjp8Akk02XsMJJUoo9kv5rExVAuQOIQkD1X+ry9Uy8kTKU+DKTmisNJOAlCzcqsVFZv3ebxk+F621Yw==",
+  "dgSpecHash": "+hqMyYzP/xIF43Qp2MsLybjqC2gT9K/HxA8+7Kl0PllHlaFdLWll9Q+p3TkdJuWWFiTPlVkHK5PUo59nRJvjIA==",
   "success": true,
   "projectFilePath": "G:\\Estudos\\Alguns Projetos\\C#\\OrderFlow\\OrderFlow.Infrastructure\\OrderFlow.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Muril\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
-    "C:\\Users\\Muril\\.nuget\\packages\\carter\\8.0.0\\carter.8.0.0.nupkg.sha512",
     "C:\\Users\\Muril\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
-    "C:\\Users\\Muril\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
     "C:\\Users\\Muril\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Muril\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\Muril\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

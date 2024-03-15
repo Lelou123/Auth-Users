@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using OrderFlow.Common.Domain.Entities.User;
+using OrderFlow.Domain.Entities.Users;
 
 namespace OrderFlow.Application.Validations;
 

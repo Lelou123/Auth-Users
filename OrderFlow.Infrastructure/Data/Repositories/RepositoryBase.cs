@@ -1,52 +1,98 @@
 ﻿using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
+using OrderFlow.Domain.Abstractions;
 using OrderFlow.Domain.Interfaces.Repositories;
+using OrderFlow.Domain.Interfaces.Services;
 
 namespace OrderFlow.Infrastructure.Data.Repositories;
 
-public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity>
-    where TEntity : class
+public abstract class RepositoryBase<TEntity>(
+    DbContext context
+) : IRepositoryBase<TEntity>
+    where TEntity : BaseEntity
 {
-    private readonly DbContext _context;
-    private readonly DbSet<TEntity> _dbSet;
-
-    protected RepositoryBase(DbContext context)
-    {
-        _context = context;
-        _dbSet = context.Set<TEntity>();
-    }
-
+    private readonly DbSet<TEntity> _dbSet = context.Set<TEntity>();
 
     public virtual async Task<IEnumerable<TEntity>> GetAsync(
+        bool includeDeleted = false,
         Expression<Func<TEntity, bool>>? filter = null,
         CancellationToken cancellationToken = default
     )
     {
-        IQueryable<TEntity> query = _dbSet;
+        Expression<Func<TEntity, bool>> defaultFilter = entity => !entity.IsDeleted && entity.IsActive;
+
+        if (includeDeleted)
+        {
+            defaultFilter = entity => !entity.IsActive && entity.IsDeleted;
+        }
 
         if (filter != null)
         {
-            query = query.Where(filter);
+            defaultFilter = Expression.Lambda<Func<TEntity, bool>>(
+                Expression.AndAlso(defaultFilter.Body, filter.Body),
+                filter.Parameters
+            );
         }
+
+        IQueryable<TEntity> query = _dbSet;
+
+        query = query.Where(defaultFilter);
 
         return await query.ToListAsync(cancellationToken);
     }
 
 
-    public virtual async Task<TEntity?> GetByIdAsync(object id) => await _dbSet.FindAsync(id);
+    public virtual async Task<IEnumerable<TDestination>> GetAsync<TDestination>(
+        IMappingService? mapper = null,
+        bool includeDeleted = false,
+        Expression<Func<TEntity, bool>>? filter = null,
+        CancellationToken cancellationToken = default
+    )
+    {
+        Expression<Func<TEntity, bool>> defaultFilter = entity => !entity.IsDeleted && entity.IsActive;
+
+        if (mapper is null)
+        {
+            throw new Exception("Error while mapping entity");
+        }
+        
+        if (includeDeleted)
+        {
+            defaultFilter = entity => !entity.IsActive && entity.IsDeleted;
+        }
+
+        if (filter != null)
+        {
+            defaultFilter = Expression.Lambda<Func<TEntity, bool>>(
+                Expression.AndAlso(defaultFilter.Body, filter.Body),
+                filter.Parameters
+            );
+        }
+
+        IQueryable<TEntity> query = _dbSet;
+
+        query = query.Where(defaultFilter);
+        
+        List<TEntity> entities = await query.ToListAsync(cancellationToken);
+
+        return mapper.Map<IEnumerable<TDestination>>(entities);
+    }
+
+
+    public virtual async Task<TEntity?> GetByIdAsync(Guid id) => await _dbSet.FindAsync(id);
 
 
     public virtual async Task InsertAsync(TEntity entity)
     {
         await _dbSet.AddAsync(entity);
-        await _context.SaveChangesAsync();
+        await context.SaveChangesAsync();
     }
 
 
     public virtual async Task InsertRangeAsync(IEnumerable<TEntity> entities)
     {
         await _dbSet.AddRangeAsync(entities);
-        await _context.SaveChangesAsync();
+        await context.SaveChangesAsync();
     }
 
 
@@ -54,29 +100,30 @@ public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity>
     {
         _dbSet.Attach(entity);
 
-        _context.Entry(entity).State = EntityState.Modified;
+        context.Entry(entity).State = EntityState.Modified;
 
         var propertyUpdatedAt = entity.GetType().GetProperty("UpdatedAt");
         propertyUpdatedAt?.SetValue(entity, DateTime.UtcNow);
 
-        await _context.SaveChangesAsync();
+        await context.SaveChangesAsync();
     }
 
 
-    public virtual async Task HardDeleteAsync(object id)
+    public virtual async Task HardDeleteAsync(Guid id)
     {
         var entityToDelete = await _dbSet.FindAsync(id);
 
-        if (entityToDelete != null)
+        if (entityToDelete is not null)
         {
-            await SoftDeleteAsync(entityToDelete);
+            _dbSet.Remove(entityToDelete);
+            await context.SaveChangesAsync();
         }
     }
 
 
     public virtual async Task SoftDeleteAsync(TEntity entity)
     {
-        if (_context.Entry(entity).State == EntityState.Detached)
+        if (context.Entry(entity).State == EntityState.Detached)
         {
             _dbSet.Attach(entity);
         }
@@ -90,15 +137,17 @@ public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity>
         var propertyIsActive = entity.GetType().GetProperty("IsActive");
         propertyIsActive?.SetValue(entity, false);
 
-        _context.Entry(entity).State = EntityState.Modified;
+        context.Entry(entity).State = EntityState.Modified;
 
-        await _context.SaveChangesAsync();
+        await context.SaveChangesAsync();
     }
 
 
-    public async Task<IEnumerable<TEntity>> GetAllIncludingAsync(params Expression<Func<TEntity, object>>[]? includeProperties)
+    public async Task<IEnumerable<TEntity>> GetAllIncludingAsync(
+        params Expression<Func<TEntity, object>>[]? includeProperties
+    )
     {
-        IQueryable<TEntity> query = _context.Set<TEntity>();
+        IQueryable<TEntity> query = context.Set<TEntity>();
 
         if (includeProperties != null)
         {

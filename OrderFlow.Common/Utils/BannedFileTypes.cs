@@ -2,8 +2,7 @@
 
 public class BannedFileTypes
 {
-    public static readonly string[] Extensions =
-    {
+    public static readonly string[] Extensions = {
         "app", //Exec Application
         "js", //Js File
         "php", //Php File

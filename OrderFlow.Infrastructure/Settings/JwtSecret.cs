@@ -1,6 +1,6 @@
 ﻿namespace OrderFlow.Infrastructure.Settings;
 
-public static class JwtSecret
+public class JwtSecret
 {
-    public static string? JwtSecretKey { get; set; }
+    public string JwtSecretKey { get; set; }
 }

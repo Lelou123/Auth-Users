@@ -1,9 +1,10 @@
-﻿using OrderFlow.Common.Domain.Entities.User;
+﻿using OrderFlow.Domain.Abstractions;
 using OrderFlow.Domain.Dtos;
+using OrderFlow.Domain.Entities.Users;
 
 namespace OrderFlow.Domain.Interfaces.Services;
 
 public interface IJwtTokenService
 {
-    JwtToken GetToken(User user, IEnumerable<string> roles);
+    Result<JwtToken> GetToken(User user, IEnumerable<string> roles);
 }
