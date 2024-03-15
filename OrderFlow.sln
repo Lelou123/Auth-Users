@@ -1,24 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderFlow", "OrderFlow\OrderFlow.csproj", "{82FC404F-8FEF-48EE-AADC-9A407D560177}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-Api", "0-Api", "{276E9D9E-4B15-42DA-A7EF-E93724774FDE}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Application", "1-Application", "{556E45E4-0795-416A-AA1B-784D92E5440F}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Domain", "2-Domain", "{12C31828-7B38-48A1-9138-7823EC26C1DB}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Infra", "3-Infra", "{3F1620C9-6BCC-4C17-841D-235BA61E1CCF}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Common", "4-Common", "{3ECBB964-9DB1-4221-917C-42EC94560FBC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderFlow.Api", "OrderFlow.Api\OrderFlow.Api.csproj", "{82FC404F-8FEF-48EE-AADC-9A407D560177}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderFlow.Domain", "OrderFlow.Domain\OrderFlow.Domain.csproj", "{96BC7826-AC8C-4575-AED1-B2DA55CEE743}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderFlow.Infra", "OrderFlow.Infra\OrderFlow.Infra.csproj", "{7E7605CF-5AF5-42B4-8030-C87DF6878603}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderFlow.Infrastructure", "OrderFlow.Infrastructure\OrderFlow.Infrastructure.csproj", "{7E7605CF-5AF5-42B4-8030-C87DF6878603}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderFlow.Common", "OrderFlow.Common\OrderFlow.Common.csproj", "{8C25B1D1-7817-4980-A320-597A3DB1FCD2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderFlow.Application", "OrderFlow.Application\OrderFlow.Application.csproj", "{9CAC016B-83D5-47A0-99DF-69A0FA581781}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderFlow.Presentation", "OrderFlow.Presentation\OrderFlow.Presentation.csproj", "{581BA490-52A0-489E-BEAB-3177E964610A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderFlow.Tests", "OrderFlow.Tests\OrderFlow.Tests.csproj", "{A3A6432C-7407-42A5-B16F-230F63C7703C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,12 +40,15 @@ Global
 		{9CAC016B-83D5-47A0-99DF-69A0FA581781}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CAC016B-83D5-47A0-99DF-69A0FA581781}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CAC016B-83D5-47A0-99DF-69A0FA581781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{581BA490-52A0-489E-BEAB-3177E964610A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{581BA490-52A0-489E-BEAB-3177E964610A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{581BA490-52A0-489E-BEAB-3177E964610A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{581BA490-52A0-489E-BEAB-3177E964610A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3A6432C-7407-42A5-B16F-230F63C7703C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3A6432C-7407-42A5-B16F-230F63C7703C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3A6432C-7407-42A5-B16F-230F63C7703C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3A6432C-7407-42A5-B16F-230F63C7703C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{82FC404F-8FEF-48EE-AADC-9A407D560177} = {276E9D9E-4B15-42DA-A7EF-E93724774FDE}
-		{96BC7826-AC8C-4575-AED1-B2DA55CEE743} = {12C31828-7B38-48A1-9138-7823EC26C1DB}
-		{7E7605CF-5AF5-42B4-8030-C87DF6878603} = {3F1620C9-6BCC-4C17-841D-235BA61E1CCF}
-		{8C25B1D1-7817-4980-A320-597A3DB1FCD2} = {3ECBB964-9DB1-4221-917C-42EC94560FBC}
-		{9CAC016B-83D5-47A0-99DF-69A0FA581781} = {556E45E4-0795-416A-AA1B-784D92E5440F}
 	EndGlobalSection
 EndGlobal

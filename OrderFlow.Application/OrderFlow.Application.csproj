@@ -1,16 +1,35 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <TargetFramework>net8.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="ApplicationServices\" />
-      <Folder Include="Handlers\Commands\" />
-      <Folder Include="Handlers\Policy\" />
-      <Folder Include="Handlers\Queries\" />
+        <Folder Include="Handlers\"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\OrderFlow.Common\OrderFlow.Common.csproj"/>
+        <ProjectReference Include="..\OrderFlow.Domain\OrderFlow.Domain.csproj"/>
+        <ProjectReference Include="..\OrderFlow.Infrastructure\OrderFlow.Infrastructure.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.0"/>
+        <PackageReference Include="MediatR" Version="12.2.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="8.0.3"/>
+        <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.3"/>
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.1.2"/>
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.1.2"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="Microsoft.AspNetCore.Http">
+            <HintPath>C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\8.0.3\Microsoft.AspNetCore.Http.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.AspNetCore.Http.Abstractions"/>
     </ItemGroup>
 
 </Project>

@@ -9,3 +9,14 @@ G:\Estudos\Alguns Projetos\C#\AuthUsers\OrderFlow.Common\obj\Debug\net7.0\OrderF
 G:\Estudos\Alguns Projetos\C#\AuthUsers\OrderFlow.Common\obj\Debug\net7.0\refint\OrderFlow.Common.dll
 G:\Estudos\Alguns Projetos\C#\AuthUsers\OrderFlow.Common\obj\Debug\net7.0\OrderFlow.Common.pdb
 G:\Estudos\Alguns Projetos\C#\AuthUsers\OrderFlow.Common\obj\Debug\net7.0\ref\OrderFlow.Common.dll
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Common\bin\Debug\net7.0\OrderFlow.Common.deps.json
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Common\bin\Debug\net7.0\OrderFlow.Common.dll
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Common\bin\Debug\net7.0\OrderFlow.Common.pdb
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Common\obj\Debug\net7.0\OrderFlow.Common.GeneratedMSBuildEditorConfig.editorconfig
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Common\obj\Debug\net7.0\OrderFlow.Common.AssemblyInfoInputs.cache
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Common\obj\Debug\net7.0\OrderFlow.Common.AssemblyInfo.cs
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Common\obj\Debug\net7.0\OrderFlow.Common.csproj.CoreCompileInputs.cache
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Common\obj\Debug\net7.0\OrderFlow.Common.dll
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Common\obj\Debug\net7.0\refint\OrderFlow.Common.dll
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Common\obj\Debug\net7.0\OrderFlow.Common.pdb
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Common\obj\Debug\net7.0\ref\OrderFlow.Common.dll

@@ -1,0 +1,16 @@
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Domain\bin\Debug\net8.0\OrderFlow.Domain.deps.json
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Domain\bin\Debug\net8.0\OrderFlow.Domain.dll
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Domain\bin\Debug\net8.0\OrderFlow.Domain.pdb
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Domain\bin\Debug\net8.0\OrderFlow.Common.dll
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Domain\bin\Debug\net8.0\OrderFlow.Common.pdb
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Domain\obj\Debug\net8.0\OrderFlow.Domain.csproj.AssemblyReference.cache
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Domain\obj\Debug\net8.0\OrderFlow.Domain.GeneratedMSBuildEditorConfig.editorconfig
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Domain\obj\Debug\net8.0\OrderFlow.Domain.AssemblyInfoInputs.cache
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Domain\obj\Debug\net8.0\OrderFlow.Domain.AssemblyInfo.cs
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Domain\obj\Debug\net8.0\OrderFlow.Domain.csproj.CoreCompileInputs.cache
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Domain\obj\Debug\net8.0\OrderFlow.Domain.sourcelink.json
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Domain\obj\Debug\net8.0\OrderFlo.BDA2A185.Up2Date
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Domain\obj\Debug\net8.0\OrderFlow.Domain.dll
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Domain\obj\Debug\net8.0\refint\OrderFlow.Domain.dll
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Domain\obj\Debug\net8.0\OrderFlow.Domain.pdb
+G:\Estudos\Alguns Projetos\C#\OrderFlow\OrderFlow.Domain\obj\Debug\net8.0\ref\OrderFlow.Domain.dll
